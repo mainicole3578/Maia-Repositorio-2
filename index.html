@@ -20,22 +20,57 @@
             <div class ="container">
                 <a class = "nvbar-brand fw-bold" href="#"> 
                 <i class = "bi bi-controller" ></i>
-                     Pokedex UNLZ
+                     Pokédex UNLZ
                 </a>
               <button class = "navbar-toggler" type="button" data-bs-target = "#menuPrincipal" aria-controls ="menuPrincipal" 
                 aria-expanded="false" aria-label1="abrir menu"> 
                 <span class = "navbar-toggler-icon"></span>
               </button>
+
+              <div class = "collapse navbar-collapse" id="menuPrincipal">
+                <ul class ="navbar-nav ms-auto">
+                    <li class = "nav-item">
+                        <a class = "nav-link active" href = "#" > inicio </a>
+                    </li>
+                </ul>
+              </div>
             </div>
         </nav>
+    </header>
 
-
-
-
-
-
-
-
-
-     </header>
+    <main>
+      <section class = "py-5">
+         <div class = "container text-center">
+            <h1 class = "fw-bold">Pokédex</h1>
+            <p class = "lead"> Busca informacion sobre tu pokemon favorito </p>
+         </div>
+      </section>
+        <section class ="pb-4">
+            <div class = "container">
+                <div class = "row justify-content-center">
+                    <div class = "col-12 col-md-8 col-lg-6">
+                        <form id ="formularioBusqueda">
+                            <label1 for="busqueda" class = "form-label fw-bold"> Buscar Pokemon </label1>
+                            <div class = "input-group" 
+                             <input
+                                    type="text"
+                                    id="busqueda"
+                                    class="form-control"
+                                    placeholder="Nombre o ID del Pokémon">
+                                <button type="submit" class = "btn btn primary">
+                                <i class = "bi bi search"></i>
+                                Buscar
+                            </button>
+                        </form>
+                        <div class = "text-center mt-3">
+                            <button id ="btnVolver" class = "btn btn-secondary">
+                                <i class ="bi bi-arrow-counterClockwise"></i>
+                                Volver a la lista
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
