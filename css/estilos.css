@@ -1,0 +1,76 @@
+body {
+      margin : 0;
+      font-family: Arial, sans-serif;
+      background-color:   #ffffff;
+      color:  #222222
+}
+
+.navbar{
+     background-color: #f8c8dc !important;
+     padding: 18px 0;
+     border-bottom: 2xp solid #e3a1bd;
+}
+
+.navbar-brand{
+     font-size: 24px;
+     color: #222222 !important;
+}
+.navbar-brand i {
+       margin-right: 8px;
+}
+
+.nav-link {
+  color: #222222 !important;
+}
+
+.nav-link:hover {
+     color: #7a3048 !important;
+}
+
+main > section:first-child h1{
+    font-size: 42px;
+    margin-bottom: 10px;
+    color:#222222;
+}
+main > section:first-child p {
+    font-size: 19px;
+    color:#222222;
+}
+
+#formularioBusqueda{
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+#busqueda{
+    padding: 12px;;
+    border: 2px solid  #e3a1bd;
+}
+
+#busqueda:focus{
+    border-color: #c96f96;
+    box-shadow: 0 0 0 0.15rem rgba(201, 111, 150, 0.20);
+}
+.btn-primary {
+    background-color:  #e3a1bd;
+    border-color: #e3a1bd;
+    color: 222222;
+}
+
+.btn-primary:hover{
+   background-color: #c96f96;
+   border-color: #c96f96;
+   color:#ffffff;
+}
+
+#btnVolver{
+    background-color:  #f8c8dc;
+    border: 2px solid #e3a1bd;
+    color: #222222;
+    padding: 10px 20px;
+}
+#btnVolver:hover{
+     background-color: #e3a1bd;
+     border-color: #e3a1bd;
+     color:#222222;
+}
