@@ -22,8 +22,6 @@
                 <i class="bi bi-controller"></i>
                 Pokédex UNLZ
             </a>
-                     Pokédex UNLZ
-                </a>
               <button class = "navbar-toggler" type="button" data-bs-target = "#menuPrincipal" aria-controls ="menuPrincipal" 
                 aria-expanded="false" aria-label1="abrir menu"> 
                 <span class = "navbar-toggler-icon"></span>
@@ -47,27 +45,35 @@
             <p class = "lead"> Busca informacion sobre tu pokemon favorito </p>
          </div>
       </section>
-        <section class ="pb-4">
-            <div class = "container">
-                <div class = "row justify-content-center">
-                    <div class = "col-12 col-md-8 col-lg-6">
-                        <form id ="formularioBusqueda">
-                            <label1 for="busqueda" class = "form-label fw-bold"> Buscar Pokemon </label1>
-                            <div class = "input-group" 
-                             <input
-                                    type="text"
-                                    id="busqueda"
-                                    class="form-control"
-                                    placeholder="Nombre o ID del Pokémon">
-                                <button type="submit" class = "btn btn primary">
-                                <i class = "bi bi search"></i>
-                                Buscar
-                            </button>
-                        </form>
-                        <div class = "text-center mt-3">
-                            <button id ="btnVolver" class = "btn btn-secondary">
-                                <i class ="bi bi-arrow-counterClockwise"></i>
-                                Volver a la lista
+      <section class="pb-4">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6">
+              <form id="formularioBusqueda">
+                    <label for="busqueda" class="form-label fw-bold">
+                        Buscar Pokemon
+                    </label>
+                        <div class="d-flex gap-2">
+                        <input 
+                            type="text"
+                            id="busqueda"
+                            class="form-control"
+                            placeholder="Nombre o ID del Pokémon"
+                        >
+                         <button type="submit" class="btn btn-primary">
+                            <i class="bi bi-search"></i>
+                            Buscar
+                        </button>
+                    </div>
+                </form>
+                 <div class="text-center mt-3">
+                    <button 
+                        id="btnVolver" 
+                        type="button" 
+                        class="btn btn-secondary"
+                    >
+                        <i class="bi bi-arrow-counterclockwise"></i>
+                        Volver a la lista
                             </button>
                         </div>
                     </div>

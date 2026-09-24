@@ -43,17 +43,20 @@ main > section:first-child p {
     color:#222222;
 }
 
-#formularioBusqueda{
+#formularioBusqueda {
     max-width: 650px;
     margin: 0 auto;
+    width: 100%;
 }
 
-#busqueda{
-    padding: 12px;;
-    border: 2px solid  #e3a1bd;
+#busqueda {
+    padding: 12px;
+    border: 2px solid #e3a1bd;
+    flex: 1;
+    min-width: 0;
 }
 
-#busqueda:focus{
+#busqueda:focus {
     border-color: #c96f96;
     box-shadow: 0 0 0 0.15rem rgba(201, 111, 150, 0.20);
 }
