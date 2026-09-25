@@ -1,4 +1,4 @@
-import { obtenerPokemones } from "./services/servicios.js";
+import { obtenerPokemon, obtenerPokemones } from "./services/servicios.js";
 import { crearTarjetaPokemon } from "./components/pokemonCard.js";
 
 const formulario = document.getElementById("formularioBusqueda");
@@ -15,10 +15,10 @@ textoCarga.classList.remove("d-none");
 
 const ocultarCarga = () => {
     spinner.classList.add ("d-none");
-    textoCarga.classList.add ("d.none");
+    textoCarga.classList.add ("d-none");
 };
 
-const cargaPokemones = async () => {
+const cargarPokemones = async () => {
     mostrarCarga();
 
     try{ const pokemones = await obtenerPokemones();
@@ -32,16 +32,18 @@ const cargaPokemones = async () => {
             icon: "error",
             title: "Error",
             text: "No se pudieron cargar los pokemon."
-
-    });
-    return;
+    });  
+ }   finally {
+        ocultarCarga();
     }
+};
+    
 
     mostrarCarga();
     try{ const pokemon = await obtenerPokemon(nombrePokemon) ;
         contenedorPokemon.innerHTML  = crearTarjetaPokemon(pokemon);
     } catch (error) {
-        contenedorPokemon.innerHTML = " ";
+        contenedorPokemon.innerHTML = "";
 
         Swal.fire({
             icon: "error",
@@ -58,5 +60,5 @@ btnVolver.addEventListener("click", () => {
     busqueda.value = "";
     cargarPokemones();
 });
-};
+
 cargarPokemones();
