@@ -22,7 +22,7 @@ const cargarPokemones = async () => {
     mostrarCarga();
 
     try{ const pokemones = await obtenerPokemones();
-        contenedorPokemon.innerHTML = " ";
+        contenedorPokemon.innerHTML = "";
         pokemones.forEach((pokemon) => {
             contenedorPokemon.innerHTML += crearTarjetaPokemon(pokemon);
         });
@@ -37,25 +37,42 @@ const cargarPokemones = async () => {
         ocultarCarga();
     }
 };
-    
+formulario.addEventListener("submit", async (evento) => {
+    evento.preventDefault();
+
+    const nombrePokemon = busqueda.value.trim().toLowerCase();
+
+    if (nombrePokemon === "") {
+        Swal.fire({
+            icon: "warning",
+            title: "Campo vacío",
+            text: "Escribí el nombre o ID de un Pokémon."
+        });
+
+        return;
+    }
 
     mostrarCarga();
-    try{ const pokemon = await obtenerPokemon(nombrePokemon) ;
-        contenedorPokemon.innerHTML  = crearTarjetaPokemon(pokemon);
+
+    try {
+        const pokemon = await obtenerPokemon(nombrePokemon);
+
+        contenedorPokemon.innerHTML = crearTarjetaPokemon(pokemon);
+
     } catch (error) {
         contenedorPokemon.innerHTML = "";
-
         Swal.fire({
             icon: "error",
             title: "Pokémon no encontrado",
             text: "No encontramos ese Pokémon.",
             confirmButtonText: "Volver a la lista"
-        }).then(()  => {
+        }).then(() => {
             cargarPokemones();
         });
     } finally {
         ocultarCarga();
-}
+    }
+});
 btnVolver.addEventListener("click", () => {
     busqueda.value = "";
     cargarPokemones();
