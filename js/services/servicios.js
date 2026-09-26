@@ -12,7 +12,7 @@ export const obtenerPokemon = async (pokemon) => {
     return datos;
 };
 export const obtenerPokemones = async () => {
-    const respuesta = await fetch(`${URL_API}?limit=12`);
+    const respuesta = await fetch(`${URL_API}?limit=30`);
 
     if (!respuesta.ok) {
         throw new Error("No se pudieron obtener los Pokémon");
